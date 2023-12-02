@@ -14,6 +14,8 @@
 // Include theme-specific fonts
 @import url(./fonts/source-sans-pro/source-sans-pro.css);
 
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,400;0,600;0,900;1,100;1,400&family=Kaushan+Script&display=swap');
+
 
 // Override theme settings (see ../template/settings.scss)
 $backgroundColor: #191919;
@@ -22,15 +24,19 @@ $mainColor: #fff;
 $headingColor: #fff;
 
 $mainFontSize: 42px;
-$mainFont: 'Source Sans Pro', Helvetica, sans-serif;
-$headingFont: 'Source Sans Pro', Helvetica, sans-serif;
-$headingTextShadow: none;
+$mainFont: 'Barlow Condensed', sans-serif;
+$headingFont: 'Kaushan Script', cursive;
+$specialFont: 'Kaushan Script', cursive;
+$headingTextShadow: 1px 3px 5px #000;
 $headingLetterSpacing: normal;
-$headingTextTransform: uppercase;
+$headingTextTransform: none;
 $headingFontWeight: 600;
+$headingTextShadow: none;
 $linkColor: #42affa;
 $linkColorHover: lighten( $linkColor, 15% );
 $selectionBackgroundColor: rgba( $linkColor, 0.75 );
+$twitterColor: rgb(226, 33, 162);
+$accentColor: rgb(226, 33, 162);
 
 $heading1Size: 2.5em;
 $heading2Size: 1.6em;
@@ -39,6 +45,18 @@ $heading4Size: 1.0em;
 
 // Change text colors against light slide backgrounds
 @include light-bg-text-color(#222);
+
+.accent {
+	color: $accentColor;
+}
+
+@mixin bodyBackground() {
+	background-color: $backgroundColor;
+  	background-image: url("../../img/johannes-plenio-2QUvkQTBh5s-unsplash.jpg");
+	background-repeat: no-repeat;
+	background-size:cover;
+	background-position: top center;
+}
 
 
 // Theme template ------------------------------
